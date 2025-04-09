@@ -1,0 +1,112 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Layout (Flexbox or Grid) */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.content {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.services, .pricing, .features {
+    margin-top: 20px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .main-content {
+        grid-template-columns: 1fr;  /* Stack the sidebar and content in a single column */
+    }
+    
+    .nav-list {
+        flex-direction: column; /* Stack the navigation links vertically */
+        align-items: center;
+    }
+    
+    .nav-list li {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-list {
+        font-size: 16px; /* Smaller font size on very small screens */
+    }
+
+    .sidebar, .content {
+        padding: 15px; /* Reduce padding on mobile */
+    }
+
+    .contact {
+        font-size: 14px; /* Smaller font size for the contact section */
+    }
+}
